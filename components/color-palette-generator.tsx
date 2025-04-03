@@ -273,12 +273,19 @@ export default function ColorPaletteGenerator() {
       {} as Record<number, string>,
     )
 
+    // Format the colors object with proper spacing and formatting
+    const formattedColors = Object.entries(colors)
+      .map(([shade, hex]) => `      ${shade}: "${hex}"`)
+      .join(",\n")
+
     const config = `/** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: ${JSON.stringify(colors, null, 6).replace(/"([^"]+)":/g, "$1:")}
+        primary: {
+${formattedColors}
+        }
       }
     }
   }
