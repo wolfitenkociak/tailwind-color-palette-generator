@@ -1,7 +1,10 @@
+import ColorPaletteGenerator from "@/components/color-palette-generator"
+
 export default function Home() {
-    return (
-        <div>
-            <h1 className="text-2xl">Hello World!</h1>
-        </div>
-    );
+  return (
+    <main className="min-h-screen p-4 md:p-8 max-w-7xl mx-auto">
+      <ColorPaletteGenerator />
+    </main>
+  )
 }
+
