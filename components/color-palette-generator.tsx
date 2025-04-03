@@ -212,10 +212,9 @@ export default function ColorPaletteGenerator() {
 
   // Set dark mode as default and sync the switch state
   useEffect(() => {
-    // Always set dark mode on initial load to match v0.dev
-    setTheme("dark")
-    setIsDarkMode(true)
-  }, [setTheme])
+    // Initialize the switch state based on the current theme
+    setIsDarkMode(theme === "dark")
+  }, [theme])
 
   // Copy hex value to clipboard
   const copyToClipboard = (hex: string) => {
