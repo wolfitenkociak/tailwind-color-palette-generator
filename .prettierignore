@@ -1,0 +1,13 @@
+# Ignore everything recursively
+*
+
+# Only format the following files
+!*.ts
+!*.tsx
+!*.css
+
+# Other
+components/ui/**/*
+
+# Check subdirectories too
+!*/
